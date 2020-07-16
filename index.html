@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" type="text/css" href="todo.css">
+</head>
+<body>
+    <div id="menu">
+        <div class="menu-container">
+            <div id="login-menu" class="menu-item" onclick="view.goToPage('inicial')">Inicial</div>
+            <div class="menu-item need-auth hidden" onclick="view.goToPage('todo')">To do</div>
+            <div class="menu-item" onclick="view.goToPage('sobre')">Sobre o App</div>        
+            <div class="menu-item need-auth hidden" onclick="view.authLogout()">Logout</div>       
+        </div>
+    </div>
+
+    <div class="pages">
+        <div class="pages-container">
+            <div id="page-inicial" class="page-content">
+                <div id="login-form">
+                    <h2>Login</h2>
+                    <input id="auth-password" type="password" onkeyup="runIfEnter(event, view.authLogin)">
+                    <button onclick="view.authLogin()">Entrar</button>            
+                </div>
+            </div>
+
+            <div id="page-todo" class="page-content hidden">
+                <div class="todo-toolbar">
+                    <button onclick="controller.index()">Todos</button>
+                    <button onclick="controller.index({completed: true})">Concluídos</button>
+                    <button onclick="controller.index({completed: false})">A Fazer</button>
+                </div>
+
+                <div class="todo-new-item">
+                    <input type="text" id="inputTodo" placeholder="New Item" onkeyup="runIfEnter(event, controller.create)">
+                    <button onclick="controller.create()">Criar</button>
+                </div>
+
+                <div id="todo-view">Nenhum ToDo! Crie o seu primeiro!</div>        
+            </div>
+
+            <div id="page-sobre" class="page-content hidden">
+                Criado por Higor Rodrigues
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

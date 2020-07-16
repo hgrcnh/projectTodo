@@ -1,0 +1,106 @@
+.hidden {
+    display: none;
+}
+
+body {
+    padding: 5px 10px;
+}
+
+/* MENU */
+.menu-container {
+    max-width: 800px;
+    margin: 1em auto;
+    padding-bottom: 0.4em;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid darkblue;
+}
+.menu-container .menu-item {
+    padding: 5px 10px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+/* PAGES */
+.pages {
+    padding: 1em 0;
+}
+.pages-container {
+    max-width: 800px;            
+    margin: 1em auto;
+}
+.page-container .page-content {
+    background-color: antiquewhite;
+    padding: 2em 1em;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+#login-form input {
+    text-align: center;
+    font-size: 20px;
+}
+#login-form button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+.todo-toolbar {
+    padding: 1em 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.todo-toolbar button {
+    padding: 5px 10px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.todo-new-item {
+    display: flex;
+    margin: 1em 0;
+}
+.todo-new-item input {
+    flex: 1;
+    font-size: 20px;
+    text-align: center;
+}
+.todo-new-item button {
+    padding: 5px 10px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+#todo-view {
+    display: flex;
+    flex-direction: column;
+}
+#todo-view .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 0;
+}
+#todo-view .todo-item input {
+    transform: scale(2);
+    padding: 10px;
+}
+#todo-view .todo-item span {
+    flex: 1;
+    margin: 0 5px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+#todo-view .todo-item button {
+    padding: 5px 15px;
+    font-size: 18px;
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
